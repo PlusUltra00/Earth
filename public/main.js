@@ -77,10 +77,6 @@ const animate = () => {
     cloudMesh.rotation.y -= 0.001
     starMesh.rotation.y -= 0.002
     controls.update()
-    render()
-}
-
-const render = () => {
     renderer.render(scene, camera)
 }
 
