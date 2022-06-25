@@ -61,7 +61,7 @@ const pointLight = new THREE.PointLight(0xffffff, 1)
 pointLight.position.set(5, 3, 5)
 scene.add(pointLight)
 
-const renderer = () => {
+const render = () => {
     renderer.render(scene, camera)
 }
 
@@ -69,7 +69,7 @@ window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer()
+    render()
 }, false)
 
 const stats = Stats()
@@ -81,7 +81,7 @@ const animate = () => {
     cloudMesh.rotation.y -= 0.001
     starMesh.rotation.y -= 0.002
     controls.update()
-    renderer()
+    render()
 }
 
 animate()
